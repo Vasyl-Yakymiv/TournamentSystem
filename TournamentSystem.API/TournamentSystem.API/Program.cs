@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TournamentSystem.API.Data;
+using TournamentSystem.API.Interfaces;
+using TournamentSystem.API.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddScoped<ITournamentRepository,TournamentRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

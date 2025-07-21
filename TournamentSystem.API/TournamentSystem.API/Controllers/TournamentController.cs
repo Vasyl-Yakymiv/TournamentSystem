@@ -1,7 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using TournamentSystem.API.Data;
+using TournamentSystem.API.Dto;
+using TournamentSystem.API.Interfaces;
+using TournamentSystem.API.Models;
 
 namespace TournamentSystem.API.Controllers
 {
@@ -9,17 +13,69 @@ namespace TournamentSystem.API.Controllers
     [ApiController]
     public class TournamentController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
-        public TournamentController(ApplicationDbContext context)
+        ITournamentRepository _tournamentRepo;
+        public TournamentController(ITournamentRepository tournamentRepo)
         {
-           _context = context;
+            _tournamentRepo = tournamentRepo;
         }
+
         [HttpGet]
         public async Task<IActionResult> GetAllTournaments()
         {
-            var touraments = await _context.Tournaments.ToListAsync();
+            var tournaments = await _tournamentRepo.GetAll();
 
-            return Ok(touraments);
+            return Ok(tournaments);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetTournamentById(int id)
+        {
+            var tournament = await _tournamentRepo.GetByIdAsync(id);
+
+            return Ok(tournament);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateTournament([FromBody] Tournament tournament)
+        {
+            if (tournament == null)
+                return BadRequest();
+
+            var createdTournament = await _tournamentRepo.CreateAsync(tournament);
+
+            return CreatedAtAction(nameof(GetTournamentById), new { id = createdTournament.Id }, createdTournament);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateTournament(int id, [FromBody] UpdateTournamentDto updateTournamentDto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var existing = await  _tournamentRepo.GetByIdAsync(id);
+
+            if (existing == null)
+                return NotFound();
+
+            existing.Title = updateTournamentDto.Title;
+            existing.Description = updateTournamentDto.Description;
+            existing.PrizeMoney = updateTournamentDto.PrizeMoney;
+            existing.Logo = updateTournamentDto.Logo;
+
+            var updated = await _tournamentRepo.UpdateAsync(existing);
+
+            return Ok(updated);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTournament(int id)
+        {
+            var existing = await _tournamentRepo.GetByIdAsync(id);
+            if (existing == null)
+               return NotFound();
+
+            await _tournamentRepo.DeleteAsync(id);
+            return NoContent();
         }
     }
 }
