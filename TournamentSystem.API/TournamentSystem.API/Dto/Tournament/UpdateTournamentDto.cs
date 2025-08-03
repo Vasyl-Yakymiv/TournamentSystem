@@ -1,4 +1,4 @@
-﻿namespace TournamentSystem.API.Dto
+﻿namespace TournamentSystem.API.Dto.Tournament
 {
     public class UpdateTournamentDto
     {

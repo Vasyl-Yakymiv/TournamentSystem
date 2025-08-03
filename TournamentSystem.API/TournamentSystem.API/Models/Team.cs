@@ -6,5 +6,7 @@
         public string TeamName { get; set; }
         public float PlayerAgeAvg { get; set; }
         public string TeamLogo { get; set; }
+
+        public ICollection<Player>? Players { get; set; }
     }
 }

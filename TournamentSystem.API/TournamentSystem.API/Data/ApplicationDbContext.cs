@@ -13,7 +13,7 @@ namespace TournamentSystem.API.Data
         public DbSet<Tournament> Tournaments { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<Team> Teams { get; set; }
-        public DbSet<PlayInTournament> PlayInTournaments { get; set; }
+        public DbSet<CreatePlayInTournamentDto> PlayInTournaments { get; set; }
 
     }
 }

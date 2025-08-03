@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using TournamentSystem.API.Data;
-using TournamentSystem.API.Dto;
+using TournamentSystem.API.Dto.Tournament;
 using TournamentSystem.API.Interfaces;
 using TournamentSystem.API.Models;
 
@@ -64,7 +64,7 @@ namespace TournamentSystem.API.Controllers
 
             var updated = await _tournamentRepo.UpdateAsync(existing);
 
-            return Ok(updated);
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
