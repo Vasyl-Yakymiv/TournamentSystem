@@ -14,7 +14,7 @@ namespace TournamentSystem.API.Repository
         {
             _context = context;
         }
-        public async Task<CreatePlayInTournamentDto> CreateRegistrationInTournament(int tournamentId, int teamId)
+        public async Task<PlayInTournament> CreateRegistrationInTournament(int tournamentId, int teamId)
         {
             var tournament = await _context.Tournaments.FirstOrDefaultAsync(t => t.Id == tournamentId);
             var team = await _context.Teams.FirstOrDefaultAsync(t => t.TeamId == teamId);
@@ -27,15 +27,15 @@ namespace TournamentSystem.API.Repository
                 return null;
             }
 
-            var playInTournament = new CreatePlayInTournamentDto()
+            PlayInTournament playInTour = new PlayInTournament()
             {
-                TeamId = team.TeamId,
-                TournamentId = tournament.Id,
+                TournamentId = tournamentId,
+                TeamId = teamId
             };
-            _context.PlayInTournaments.Add(playInTournament);
+            _context.PlayInTournaments.Add(playInTour);
             await _context.SaveChangesAsync();
 
-            return playInTournament;
+            return playInTour;
         }
 
         public async Task DeletePlayInTournament(int id)
@@ -67,18 +67,18 @@ namespace TournamentSystem.API.Repository
 
         }
 
-        public async Task<CreatePlayInTournamentDto> GetPlayInTournamentById(int id)
+        public async Task<PlayInTournament> GetPlayInTournamentById(int id)
         {
             return await _context.PlayInTournaments.FirstOrDefaultAsync(p => p.PlayInId == id);
         }
 
-        public async Task<IEnumerable<CreatePlayInTournamentDto>> GetTeamsByTournament(int tournamentId)
+        public async Task<IEnumerable<PlayInTournament>> GetTeamsByTournament(int tournamentId)
         {
             var tournament = await _context.Tournaments.AnyAsync(t => t.Id  == tournamentId);
 
             if (tournament == null)
             {
-                return Enumerable.Empty<CreatePlayInTournamentDto>();
+                return Enumerable.Empty<PlayInTournament>();
             }
 
             var teamsInTournament = await _context.PlayInTournaments
@@ -89,7 +89,7 @@ namespace TournamentSystem.API.Repository
             return teamsInTournament;
         }
 
-        public async Task<CreatePlayInTournamentDto> UpdateTeamPlayInTournamet(int id)
+        public async Task<PlayInTournament> UpdateTeamPlayInTournamet(int id)
         {
             var playInTournament = await _context.PlayInTournaments.FirstOrDefaultAsync(p => p.PlayInId == id);
 

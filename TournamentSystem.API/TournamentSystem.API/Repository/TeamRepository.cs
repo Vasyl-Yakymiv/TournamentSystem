@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 using TournamentSystem.API.Data;
+using TournamentSystem.API.Dto.Player;
+using TournamentSystem.API.Dto.Team;
 using TournamentSystem.API.Interfaces;
 using TournamentSystem.API.Models;
 
@@ -31,9 +33,23 @@ namespace TournamentSystem.API.Repository
             }
         }
 
-        public async Task<IEnumerable<Team>> GetAll()
+        public async Task<IEnumerable<GetAllTeamDto>> GetAll()
         {
-            return await _context.Teams.ToListAsync();
+            var teams = await _context.Teams.Include(t => t.Players).ToListAsync();
+            var result = teams.Select(t => new GetAllTeamDto
+            {
+                TeamId = t.TeamId,
+                TeamName = t.TeamName,
+                Players = t.Players.Select(p => new GetAllPlayerDto
+                {
+                    PlayerId = p.PlayerId,
+                    NickName = p.NickName,
+                    Age = p.Age,
+                    Image = p.Photo
+                }).ToList()
+            }).ToList();
+
+            return result;
         }
 
         public async Task<Team> GetTeamById(int id)

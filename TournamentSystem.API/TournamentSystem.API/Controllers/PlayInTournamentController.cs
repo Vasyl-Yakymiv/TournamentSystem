@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TournamentSystem.API.Dto.PlayInTournament;
+using TournamentSystem.API.Interfaces;
 using TournamentSystem.API.Models;
 using TournamentSystem.API.Repository;
 
@@ -8,9 +10,9 @@ namespace TournamentSystem.API.Controllers
     [ApiController]
     public class PlayInTournamentController : Controller
     {
-        private readonly PlayInTournamentRepository _playInRepo;
+        private readonly IPlayInTournamentRepository _playInRepo;
 
-        public PlayInTournamentController(PlayInTournamentRepository playInRepo)
+        public PlayInTournamentController(IPlayInTournamentRepository playInRepo)
         {
             _playInRepo = playInRepo;
         }
@@ -30,7 +32,7 @@ namespace TournamentSystem.API.Controllers
         {
             if (createPlayInTournamentDto == null)
                 return BadRequest();
-            var created = await _playInRepo.CreateRegistrationInTournament(createPlayInTournamentDto.TournamentId.Value,createPlayInTournamentDto.TeamId.Value);
+            var created = await _playInRepo.CreateRegistrationInTournament(createPlayInTournamentDto.TournamentId,createPlayInTournamentDto.TeamId);
 
             return CreatedAtAction(nameof(GetPlayInTournamentById), new { id = created.PlayInId }, created);
         }

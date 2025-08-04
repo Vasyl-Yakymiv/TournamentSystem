@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TournamentSystem.API.Models
 {
-    public class CreatePlayInTournamentDto
+    public class PlayInTournament
     {
         [Key]
         public int PlayInId { get; set; }
