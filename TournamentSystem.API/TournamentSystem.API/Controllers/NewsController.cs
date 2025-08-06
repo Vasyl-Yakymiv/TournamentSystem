@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using TournamentSystem.API.Dto.News;
 using TournamentSystem.API.Interfaces;
 using TournamentSystem.API.Models;
@@ -65,7 +66,7 @@ namespace TournamentSystem.API.Controllers
             var existing = await _newsRepo.GetNewsByIdAsync(id);
             if (existing == null) return NotFound();
 
-            _newsRepo.DeleteNewsAsync(id);
+            await _newsRepo.DeleteNewsAsync(existing.NewsId);
 
             return NoContent();
         }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TournamentSystem.API.Data;
 
@@ -11,9 +12,11 @@ using TournamentSystem.API.Data;
 namespace TournamentSystem.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250806105627_AddMatchModel")]
+    partial class AddMatchModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,48 +24,6 @@ namespace TournamentSystem.API.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("TournamentSystem.API.Models.Match", b =>
-                {
-                    b.Property<int>("MatchId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MatchId"));
-
-                    b.Property<DateTime>("MatchDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("ScoreA")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ScoreB")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TeamAId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TeamBId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TournamentId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("WinnerTeamId")
-                        .HasColumnType("int");
-
-                    b.HasKey("MatchId");
-
-                    b.HasIndex("TeamAId");
-
-                    b.HasIndex("TeamBId");
-
-                    b.HasIndex("TournamentId");
-
-                    b.HasIndex("WinnerTeamId");
-
-                    b.ToTable("Matches");
-                });
 
             modelBuilder.Entity("TournamentSystem.API.Models.News", b =>
                 {
@@ -199,40 +160,6 @@ namespace TournamentSystem.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tournaments");
-                });
-
-            modelBuilder.Entity("TournamentSystem.API.Models.Match", b =>
-                {
-                    b.HasOne("TournamentSystem.API.Models.Team", "TeamA")
-                        .WithMany()
-                        .HasForeignKey("TeamAId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("TournamentSystem.API.Models.Team", "TeamB")
-                        .WithMany()
-                        .HasForeignKey("TeamBId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("TournamentSystem.API.Models.Tournament", "Tournament")
-                        .WithMany()
-                        .HasForeignKey("TournamentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TournamentSystem.API.Models.Team", "WinnerTeam")
-                        .WithMany()
-                        .HasForeignKey("WinnerTeamId")
-                        .OnDelete(DeleteBehavior.SetNull);
-
-                    b.Navigation("TeamA");
-
-                    b.Navigation("TeamB");
-
-                    b.Navigation("Tournament");
-
-                    b.Navigation("WinnerTeam");
                 });
 
             modelBuilder.Entity("TournamentSystem.API.Models.PlayInTournament", b =>

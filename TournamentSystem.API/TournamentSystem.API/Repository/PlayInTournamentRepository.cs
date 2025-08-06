@@ -53,7 +53,7 @@ namespace TournamentSystem.API.Repository
         {
             var tournament = await _context.Tournaments.AnyAsync(t => t.Id == tournamentId);
 
-            if (tournament == null)
+            if (!tournament)
             return Enumerable.Empty<Player>();
 
             var players = await _context.PlayInTournaments
