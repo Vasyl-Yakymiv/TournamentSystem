@@ -70,8 +70,7 @@ namespace TournamentSystem.API.Controllers
         {
             var existing = await _playerRepo.GetPlayerById(id);
 
-            if(existing == null)    
-                return NotFound();
+            if(existing == null) return NotFound();
 
             var deletedPlayer = _playerRepo.DeletePlayerAsync(id);
             return NoContent();

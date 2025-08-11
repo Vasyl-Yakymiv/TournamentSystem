@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Identity.Client;
 using TournamentSystem.API.Data;
+using TournamentSystem.API.Dto.Player;
 using TournamentSystem.API.Interfaces;
 using TournamentSystem.API.Models;
 
@@ -35,9 +36,20 @@ namespace TournamentSystem.API.Repository
 
         }
 
-        public async Task<IEnumerable<Player>> GetAll()
+        public async Task<IEnumerable<PlayerDto>> GetAll()
         {
-            return await _context.Players.Include(p =>p.Team).ToListAsync();
+            return await _context.Players
+                .Include(p => p.Team)
+                .Select(p => new PlayerDto
+                {
+                    PlayerId = p.PlayerId,
+                    NickName = p.NickName,
+                    Age = p.Age,
+                    TeamId = p.Team.TeamId,
+                    TeamName = p.Team.TeamName,
+                    Image = p.Photo
+                })
+                .ToListAsync();
         }
 
         public async Task<Player> GetPlayerById(int id)

@@ -34,14 +34,21 @@ namespace TournamentSystem.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateNews([FromBody] News news)
+        public async Task<IActionResult> CreateNews([FromBody] CreateNewsDto createNewsDto)
         {
             if(!ModelState.IsValid) 
                 return BadRequest();
 
-            var created = _newsRepo.CreateNewsAsync(news);
+            var news = new News
+            {
+                Title = createNewsDto.Title,
+                Content = createNewsDto.Content,
+                ImageUrl = createNewsDto.ImageUrl
+            };
 
-            return CreatedAtAction(nameof(CreateNews),new {id = news.NewsId }, created);
+            await _newsRepo.CreateNewsAsync(news);
+
+            return CreatedAtAction(nameof(CreateNews),new {id = news.NewsId }, news);
         }
 
         [HttpPut]

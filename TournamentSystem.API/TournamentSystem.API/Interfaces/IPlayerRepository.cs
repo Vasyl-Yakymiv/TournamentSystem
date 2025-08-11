@@ -1,10 +1,11 @@
-﻿using TournamentSystem.API.Models;
+﻿using TournamentSystem.API.Dto.Player;
+using TournamentSystem.API.Models;
 
 namespace TournamentSystem.API.Interfaces
 {
     public interface IPlayerRepository
     {
-        Task<IEnumerable<Player>> GetAll();
+        Task<IEnumerable<PlayerDto>> GetAll();
         Task<Player> GetPlayerById(int id);
         Task<Player> UpdatePlayerAsync(Player player);
         Task<Player> CreatePlayerAsync(Player player);

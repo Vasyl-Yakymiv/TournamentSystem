@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\repository\\matchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\repository\\matchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\controllers\\transfercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\controllers\\transfercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\repository\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\repository\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\interfaces\\itransferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\interfaces\\itransferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\models\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\models\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\repository\\transferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\repository\\transferrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\controllers\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\controllers\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TeamRepository.cs",
-              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Repository\\TeamRepository.cs",
-              "RelativeDocumentMoniker": "TournamentSystem.API\\Repository\\TeamRepository.cs",
-              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Repository\\TeamRepository.cs",
-              "RelativeToolTip": "TournamentSystem.API\\Repository\\TeamRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T13:47:20.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Tournament.cs",
-              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Models\\Tournament.cs",
-              "RelativeDocumentMoniker": "TournamentSystem.API\\Models\\Tournament.cs",
-              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Models\\Tournament.cs",
-              "RelativeToolTip": "TournamentSystem.API\\Models\\Tournament.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "TransferRepository.cs",
+              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Repository\\TransferRepository.cs",
+              "RelativeDocumentMoniker": "TournamentSystem.API\\Repository\\TransferRepository.cs",
+              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Repository\\TransferRepository.cs",
+              "RelativeToolTip": "TournamentSystem.API\\Repository\\TransferRepository.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEEAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T13:47:14.751Z",
+              "WhenOpened": "2025-08-11T12:33:13.209Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MatchRepository.cs",
-              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Repository\\MatchRepository.cs",
-              "RelativeDocumentMoniker": "TournamentSystem.API\\Repository\\MatchRepository.cs",
-              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Repository\\MatchRepository.cs",
-              "RelativeToolTip": "TournamentSystem.API\\Repository\\MatchRepository.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAD4AAABFAAAA",
+              "Title": "TransferController.cs",
+              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\TransferController.cs",
+              "RelativeDocumentMoniker": "TournamentSystem.API\\Controllers\\TransferController.cs",
+              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\TransferController.cs",
+              "RelativeToolTip": "TournamentSystem.API\\Controllers\\TransferController.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAMwGAAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T13:40:08.131Z",
+              "WhenOpened": "2025-08-11T10:51:06.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\PlayerController.cs",
-              "RelativeDocumentMoniker": "TournamentSystem.API\\Controllers\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\PlayerController.cs",
-              "RelativeToolTip": "TournamentSystem.API\\Controllers\\PlayerController.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADAAAAALAAAA",
+              "DocumentIndex": 1,
+              "Title": "ITransferRepository.cs",
+              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Interfaces\\ITransferRepository.cs",
+              "RelativeDocumentMoniker": "TournamentSystem.API\\Interfaces\\ITransferRepository.cs",
+              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Interfaces\\ITransferRepository.cs",
+              "RelativeToolTip": "TournamentSystem.API\\Interfaces\\ITransferRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T13:19:17.254Z",
+              "WhenOpened": "2025-08-11T12:34:27.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MatchController.cs",
-              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\MatchController.cs",
-              "RelativeDocumentMoniker": "TournamentSystem.API\\Controllers\\MatchController.cs",
-              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\MatchController.cs",
-              "RelativeToolTip": "TournamentSystem.API\\Controllers\\MatchController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAACgAAAApAAAA",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "TournamentSystem.API\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "TournamentSystem.API\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T12:56:53.631Z",
+              "WhenOpened": "2025-08-11T12:38:55.304Z",
               "EditorCaption": ""
             }
           ]
