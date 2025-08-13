@@ -75,5 +75,17 @@ namespace TournamentSystem.API.Controllers
             await _teamRepo.DeleteTeamAsync(id);
             return NoContent();
         }
+
+        [HttpGet("{teamId}/stats")]
+        public async Task<IActionResult> GetTeamStats(int teamId)
+        {
+            var existing = await _teamRepo.GetTeamById(teamId);
+
+            if (existing == null) return NotFound();
+
+            var teamStats = await _teamRepo.GetTeamStatsById(teamId);
+
+            return Ok(teamStats);
+        }
     }
 }

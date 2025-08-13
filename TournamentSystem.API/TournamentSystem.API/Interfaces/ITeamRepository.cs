@@ -7,6 +7,7 @@ namespace TournamentSystem.API.Interfaces
     {
         Task<IEnumerable<GetAllTeamDto>> GetAll();
         Task<Team> GetTeamById(int id);
+        Task<TeamStatsDto> GetTeamStatsById(int id);
         Task<Team> CreateTeamAsync(Team team);
         Task<Team> UpdateTeamAsync(Team team);
         Task DeleteTeamAsync(int id);

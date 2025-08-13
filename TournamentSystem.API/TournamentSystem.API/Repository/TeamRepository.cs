@@ -57,6 +57,30 @@ namespace TournamentSystem.API.Repository
             return await _context.Teams.FirstOrDefaultAsync(t => t.TeamId == id);
         }
 
+        public async Task<TeamStatsDto> GetTeamStatsById(int id)
+        {
+            var existing = await _context.Teams.FirstOrDefaultAsync(t => t.TeamId == id);   
+            
+            var matches = await _context.Matches
+                .Where(m => m.TeamAId == existing.TeamId || m.TeamBId == existing.TeamId)
+                .ToListAsync();
+
+            var wins = matches.Count(m => m.WinnerTeamId == existing.TeamId);
+            var losses = matches.Count(m => m.WinnerTeamId != existing.TeamId && m.WinnerTeamId != null);
+            var totalMatches = matches.Count();
+
+
+            var stats = new TeamStatsDto
+            {
+                TeamId = existing.TeamId,
+                TeamMatches = totalMatches,
+                Wins = wins,
+                Losses = losses
+            };
+
+            return stats;
+        }
+
         public async Task<Team> UpdateTeamAsync(Team team)
         {
            _context.Teams.Update(team);
