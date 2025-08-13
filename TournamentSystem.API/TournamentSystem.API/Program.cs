@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using TournamentSystem.API.Data;
 using TournamentSystem.API.Interfaces;
 using TournamentSystem.API.Repository;
+using TournamentSystem.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,7 @@ builder.Services.AddScoped<IPlayInTournamentRepository, PlayInTournamentReposito
 builder.Services.AddScoped<INewsRepository, NewsRepository>();
 builder.Services.AddScoped<IMatchRepository, MatchRepository>();
 builder.Services.AddScoped<ITransferRepository, TransferRepository>();  
+builder.Services.AddScoped<ISearchService,SearchService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
