@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.SignalR;
 using TournamentSystem.API.Dto.Match;
+using TournamentSystem.API.Hubs;
 using TournamentSystem.API.Interfaces;
 using TournamentSystem.API.Models;
 
@@ -11,9 +13,12 @@ namespace TournamentSystem.API.Controllers
     public class MatchController : Controller
     {
         private readonly IMatchRepository _matchRepo;
-        public MatchController(IMatchRepository matchRepo)
+        private readonly IHubContext<MatchHub> _hubContext;
+
+        public MatchController(IMatchRepository matchRepo, IHubContext<MatchHub> hubContext)
         {
             _matchRepo = matchRepo;
+            _hubContext = hubContext;
         }
         [HttpGet("all")]
         public async Task<IActionResult> GetAllMatches()
@@ -49,22 +54,31 @@ namespace TournamentSystem.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateMatch([FromBody] Match match)
+        public async Task<IActionResult> CreateMatch([FromBody] CreateMatchDto createMatchDto)
         {
+            if (createMatchDto == null) return BadRequest();
+
             if (!ModelState.IsValid) return BadRequest();
 
-            if (match == null) return BadRequest();
+            var match = new Match
+            {
+                TeamAId = createMatchDto.TeamAId,
+                TeamBId = createMatchDto.TeamBId,
+                TournamentId = createMatchDto.TournamentId,
+                MatchDate = createMatchDto.MatchDate,
+                ScoreA = 0,
+                ScoreB = 0
+            };
 
             var created = await _matchRepo.CreateMatch(match);
 
             return CreatedAtAction(nameof(GetMatchById), new { id  = created.MatchId}, created);
         }
 
-        [HttpPut]
+        [HttpPut("all")]
         public async Task<IActionResult> UpdateMatch(int id , UpdateMatchDto updateMatchDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
             var existing = await _matchRepo.GetMatchById(id);
 
@@ -80,6 +94,31 @@ namespace TournamentSystem.API.Controllers
             await _matchRepo.UpdateMatch(existing);
             return NoContent();
         }
+
+        [HttpPut("score")]
+        public async Task<IActionResult> UpdateScoreMatch(int id, UpdateScoreMatchDto updateScoreMatchDto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            var existing =  await _matchRepo.GetMatchById(id);
+
+            if (existing == null) return NotFound();  
+
+            existing.ScoreA = updateScoreMatchDto.ScoreA;
+            existing.ScoreB= updateScoreMatchDto.ScoreB;
+
+            await _matchRepo.UpdateMatch(existing);
+
+            await _hubContext.Clients.All.SendAsync("ScoreUpdated", new
+            {
+                MatchId = existing.MatchId,
+                ScoreA = existing.ScoreA,
+                ScoreB = existing.ScoreB
+            });
+
+            return NoContent();
+        }
+
 
         [HttpDelete]
         public async Task<IActionResult> DeleteMatch(int id)

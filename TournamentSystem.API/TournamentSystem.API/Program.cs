@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TournamentSystem.API.Data;
+using TournamentSystem.API.Hubs;
 using TournamentSystem.API.Interfaces;
 using TournamentSystem.API.Repository;
 using TournamentSystem.API.Services;
@@ -23,6 +24,7 @@ builder.Services.AddScoped<ISearchService,SearchService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -38,5 +40,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHub<MatchHub>("/matchHub");
 
 app.Run();
