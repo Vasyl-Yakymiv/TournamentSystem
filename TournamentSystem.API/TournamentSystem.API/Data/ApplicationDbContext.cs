@@ -17,6 +17,7 @@ namespace TournamentSystem.API.Data
         public DbSet<News> News { get; set; }
         public DbSet<Match> Matches { get; set; }
         public DbSet<Transfer> Transfers { get; set; }
+        public DbSet<PlayerStats> PlayerStats { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

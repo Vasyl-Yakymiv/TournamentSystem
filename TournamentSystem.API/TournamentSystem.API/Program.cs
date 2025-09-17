@@ -21,6 +21,7 @@ builder.Services.AddScoped<INewsRepository, NewsRepository>();
 builder.Services.AddScoped<IMatchRepository, MatchRepository>();
 builder.Services.AddScoped<ITransferRepository, TransferRepository>();  
 builder.Services.AddScoped<ISearchService,SearchService>();
+builder.Services.AddScoped<IPlayerStatsRepository,PlayerStatsRepository>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

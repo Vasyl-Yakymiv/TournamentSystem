@@ -46,13 +46,11 @@ namespace TournamentSystem.API.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdatePlayer(int id, [FromBody] UpdatePlayerDto playerDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
             var existing = await _playerRepo.GetPlayerById(id);
 
-            if (existing == null)
-                return NotFound();
+            if (existing == null) return NotFound();
 
             existing.TeamId = playerDto.TeamId;
             existing.NickName = playerDto.NickName;

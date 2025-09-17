@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\repository\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\repository\\teamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\repository\\playerstatsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\repository\\playerstatsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\controllers\\playerstatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\controllers\\playerstatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\dto\\team\\teamstatsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\dto\\team\\teamstatsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|c:\\users\\kynguat\\tournamentsystem\\tournamentsystem\\tournamentsystem.api\\tournamentsystem.api\\dto\\playerstats\\createplayerstatsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A086867-F747-4C98-A701-77A02CCAFA0B}|TournamentSystem.API\\TournamentSystem.API.csproj|solutionrelative:tournamentsystem.api\\dto\\playerstats\\createplayerstatsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TeamController.cs",
-              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\TeamController.cs",
-              "RelativeDocumentMoniker": "TournamentSystem.API\\Controllers\\TeamController.cs",
-              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\TeamController.cs",
-              "RelativeToolTip": "TournamentSystem.API\\Controllers\\TeamController.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAFUAAAAhAAAA",
+              "DocumentIndex": 0,
+              "Title": "PlayerStatsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Repository\\PlayerStatsRepository.cs",
+              "RelativeDocumentMoniker": "TournamentSystem.API\\Repository\\PlayerStatsRepository.cs",
+              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Repository\\PlayerStatsRepository.cs",
+              "RelativeToolTip": "TournamentSystem.API\\Repository\\PlayerStatsRepository.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAACUAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T14:14:53.676Z",
+              "WhenOpened": "2025-09-17T12:06:14.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TeamRepository.cs",
-              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Repository\\TeamRepository.cs",
-              "RelativeDocumentMoniker": "TournamentSystem.API\\Repository\\TeamRepository.cs",
-              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Repository\\TeamRepository.cs",
-              "RelativeToolTip": "TournamentSystem.API\\Repository\\TeamRepository.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAEQAAABnAAAA",
+              "DocumentIndex": 3,
+              "Title": "CreatePlayerStatsDto.cs",
+              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Dto\\PlayerStats\\CreatePlayerStatsDto.cs",
+              "RelativeDocumentMoniker": "TournamentSystem.API\\Dto\\PlayerStats\\CreatePlayerStatsDto.cs",
+              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Dto\\PlayerStats\\CreatePlayerStatsDto.cs",
+              "RelativeToolTip": "TournamentSystem.API\\Dto\\PlayerStats\\CreatePlayerStatsDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T14:03:06.243Z",
+              "WhenOpened": "2025-09-17T11:48:17.345Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TeamStatsDto.cs",
-              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Dto\\Team\\TeamStatsDto.cs",
-              "RelativeDocumentMoniker": "TournamentSystem.API\\Dto\\Team\\TeamStatsDto.cs",
-              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Dto\\Team\\TeamStatsDto.cs",
-              "RelativeToolTip": "TournamentSystem.API\\Dto\\Team\\TeamStatsDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Title": "MatchController.cs",
+              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\MatchController.cs",
+              "RelativeDocumentMoniker": "TournamentSystem.API\\Controllers\\MatchController.cs",
+              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\MatchController.cs",
+              "RelativeToolTip": "TournamentSystem.API\\Controllers\\MatchController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T13:37:24.63Z",
+              "WhenOpened": "2025-09-17T11:46:18.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerStatsController.cs",
+              "DocumentMoniker": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\PlayerStatsController.cs",
+              "RelativeDocumentMoniker": "TournamentSystem.API\\Controllers\\PlayerStatsController.cs",
+              "ToolTip": "C:\\Users\\KynguaT\\TournamentSystem\\TournamentSystem\\TournamentSystem.API\\TournamentSystem.API\\Controllers\\PlayerStatsController.cs",
+              "RelativeToolTip": "TournamentSystem.API\\Controllers\\PlayerStatsController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADoAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T11:00:54.944Z",
               "EditorCaption": ""
             }
           ]
